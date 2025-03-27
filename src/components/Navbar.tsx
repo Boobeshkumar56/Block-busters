@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <NavLink to="/" className="flex items-center">
-            <span className="text-health-800 font-semibold text-xl">Bloom</span>
+            <span className="text-health-800 font-semibold text-xl">Femme care</span>
           </NavLink>
           
           {/* Desktop Navigation */}

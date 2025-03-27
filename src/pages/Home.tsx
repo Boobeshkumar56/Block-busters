@@ -76,7 +76,7 @@ const Home = () => {
               Empowering Women Through Health Insights
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Bloom helps you understand your body better with personalized tracking,
+              Femme Care helps you understand your body better with personalized tracking,
               predictions, and health recommendations.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -205,7 +205,7 @@ const Home = () => {
               Ready to Take Control of Your Health?
             </h2>
             <p className="staggered-item text-lg mb-8 text-foreground/80">
-              Start your journey with Bloom today and discover personalized insights
+              Start your journey with Femme care today and discover personalized insights
               for your unique health needs.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
