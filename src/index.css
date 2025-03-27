@@ -1,0 +1,161 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 350 30% 99%;
+    --foreground: 350 25% 15%;
+
+    --card: 350 20% 99%;
+    --card-foreground: 350 25% 15%;
+
+    --popover: 350 20% 99%;
+    --popover-foreground: 350 25% 15%;
+
+    --primary: 350 80% 65%;
+    --primary-foreground: 350 20% 99%;
+
+    --secondary: 350 20% 95%;
+    --secondary-foreground: 350 25% 25%;
+
+    --muted: 350 20% 95%;
+    --muted-foreground: 350 25% 40%;
+
+    --accent: 350 20% 95%;
+    --accent-foreground: 350 25% 25%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 350 20% 99%;
+
+    --border: 350 20% 90%;
+    --input: 350 20% 90%;
+    --ring: 350 70% 70%;
+
+    --radius: 0.85rem;
+  }
+
+  .dark {
+    --background: 350 25% 10%;
+    --foreground: 350 20% 95%;
+
+    --card: 350 25% 12%;
+    --card-foreground: 350 20% 95%;
+
+    --popover: 350 25% 12%;
+    --popover-foreground: 350 20% 95%;
+
+    --primary: 350 70% 60%;
+    --primary-foreground: 350 20% 99%;
+
+    --secondary: 350 25% 20%;
+    --secondary-foreground: 350 20% 95%;
+
+    --muted: 350 25% 20%;
+    --muted-foreground: 350 20% 70%;
+
+    --accent: 350 25% 20%;
+    --accent-foreground: 350 20% 95%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 350 20% 90%;
+
+    --border: 350 25% 25%;
+    --input: 350 25% 25%;
+    --ring: 350 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    @apply antialiased overflow-x-hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground min-h-screen;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/30 shadow-md rounded-2xl;
+  }
+  
+  .health-input {
+    @apply w-full px-4 py-3 rounded-lg border border-health-200 focus:outline-none focus:ring-2 focus:ring-health-400 transition-all duration-200 bg-white/80;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-health-500 text-white rounded-lg hover:bg-health-600 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-health-200 text-health-800 rounded-lg hover:bg-health-300 transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .page-transition {
+    @apply animate-fadeIn;
+  }
+}
+
+/* Custom Animations */
+.slide-up {
+  animation: slideUp 0.6s ease forwards;
+}
+
+.slide-down {
+  animation: slideDown 0.6s ease forwards;
+}
+
+.staggered-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.staggered-item.animate {
+  animation: staggeredFadeIn 0.5s ease forwards;
+}
+
+@keyframes staggeredFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glass Morphism Effects */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+/* Subtle scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
